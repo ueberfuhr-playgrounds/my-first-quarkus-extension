@@ -1,0 +1,10 @@
+name: 'Auto Assign'
+on:
+  pull_request:
+    types: [ opened, ready_for_review ]
+
+jobs:
+  add-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dawn0114/assign-action@v1.3.0
